@@ -64,14 +64,59 @@
     XCTAssertNotEqual(s1, [self createUniqueInstance]);
 }
 
-//- (void)testBaseQuery {
-//    NSString *query = @"select * from users where relation = 1";
-//    
-//    DARDBManager *s1 = [self createUniqueInstance];
-//    
-//    NSArray *result = [s1 loadDataFromDB:query];
-//    
-//    XCTAssertEqual(2, result.count);
-//}
+- (void)testBaseQuery {
+    NSString *query = @"select * from users where relation = 0";
+    XCTestExpectation *requestExpectation = [self expectationWithDescription:@"completion"];
+    
+    DARDBManager *s1 = [self createUniqueInstance];
+    
+    [s1 loadDataFromDB:query
+     completionHandler:^(NSArray *result) {
+         XCTAssertEqual(2, result.count);
+         [requestExpectation fulfill];
+     }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        XCTAssertNil(error, "Error");
+    }];
+}
+
+- (void)testSelectAllQuery {
+    NSString *query = @"select * from users";
+    XCTestExpectation *requestExpectation = [self expectationWithDescription:@"completion"];
+    
+    DARDBManager *s1 = [self createUniqueInstance];
+    
+    [s1 loadDataFromDB:query
+     completionHandler:^(NSArray *result) {
+         XCTAssertNotNil(result);
+         NSLog(@"%@", result);
+         [requestExpectation fulfill];
+     }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        XCTAssertNil(error, "Error");
+    }];
+}
+
+- (void)testInsertQuery {
+    NSString *insert = @"INSERT INTO USERS VALUES ('Anna', 'Smith', 'anna@gmail.com', '22223', '5th street, New York', 0, 4, 0, 0)";
+    XCTestExpectation *requestExpectation = [self expectationWithDescription:@"completion"];
+    
+    DARDBManager *s1 = [self createUniqueInstance];
+    
+    [s1 executeQuery:insert];
+    
+    NSString *query = @"select * from users where name = 'Alex'";
+    [s1 loadDataFromDB:query
+     completionHandler:^(NSArray *result) {
+         XCTAssertEqual(1, result.count);
+         [requestExpectation fulfill];
+     }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        XCTAssertNil(error, "Error");
+    }];
+}
 
 @end
