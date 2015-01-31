@@ -1,0 +1,33 @@
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "JtD-KK-t9c"; */
+"JtD-KK-t9c.text" = "Label";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "MFt-bV-bZ4"; */
+"MFt-bV-bZ4.normalTitle" = "Button";
+
+/* Class = "IBUILabel"; text = "Loaded by SecondViewController"; ObjectID = "NDk-cv-Gan"; */
+"NDk-cv-Gan.text" = "Loaded by SecondViewController";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "Yzb-IA-UsX"; */
+"Yzb-IA-UsX.normalTitle" = "Button";
+
+/* Class = "IBUITabBarItem"; title = "Users"; ObjectID = "Ztn-ds-7rC"; */
+"Ztn-ds-7rC.title" = "Users";
+
+/* Class = "IBUITabBarItem"; title = "Map"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Map";
+
+/* Class = "IBUITabBarItem"; title = "Find Friends"; ObjectID = "bx8-Jw-pwT"; */
+"bx8-Jw-pwT.title" = "Find Friends";
+
+/* Class = "IBUITabBarItem"; title = "Profile"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Profile";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "e4N-fl-r3R"; */
+"e4N-fl-r3R.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "luV-oq-0zL"; */
+"luV-oq-0zL.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Second View"; ObjectID = "zEq-FU-wV5"; */
+"zEq-FU-wV5.text" = "Second View";

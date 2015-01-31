@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  DARSocialExample
+
+  Created by Alessio Roberto on 25/01/15.
+  Copyright (c) 2015 Alessio Roberto. All rights reserved.
+*/
+
+"Attention" = "Attention";
+"Close" = "Close";
+
+// Login ViewController
+"Login Email Label" = "Email";
+"Login Password Label" = "Password";
+
+"Login Email TextField" = "your email";
+"Login Password TextField" = "your password";
+
+"Login Login Button" = "Login";
+"Login Signup Button" = "SignUp";
+
+"Wrong Email" = "Wrong Email";
+
+// User Map View
+"User Pin" = "Your Last Position";
+
+// User Profile View
+"Name" = "Name";
+"Email" = "Email";
+"Phone" = "Phone";
+"Address" = "Address";
+"Relation" = "Relation";

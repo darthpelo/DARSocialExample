@@ -1,0 +1,13 @@
+PODS:
+  - BoltsTask (1.1.0)
+  - MBProgressHUD (0.9)
+
+DEPENDENCIES:
+  - BoltsTask (~> 1.1.0)
+  - MBProgressHUD (~> 0.9)
+
+SPEC CHECKSUMS:
+  BoltsTask: 11cea41b3e62af557986332f6155e1822ce7b4e0
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+
+COCOAPODS: 0.35.0
